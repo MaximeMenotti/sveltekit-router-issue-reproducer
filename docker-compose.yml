@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  svelte-renderer:
+    build:
+      context: ./svelte-content-renderer
+      target: svelte-content-renderer
+    ports:
+      - "3000:3000"
+  next-consumer:
+    build:
+      context: ./next-js-consumer
+    ports:
+      - "3001:3001"
+    depends_on:
+      - svelte-renderer
+    environment:
+      - NEXT_CONTENT_RENDERER_BASE_URL=http://svelte-renderer:3000
+
