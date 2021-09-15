@@ -10,6 +10,7 @@
     "widget:build": "NODE_ENV=production webpack"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -19,6 +20,7 @@
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
     "@babel/preset-react": "^7.14.5",
+    "@types/cors": "^2.8.12",
     "@types/react": "17.0.19",
     "@types/react-dom": "^17.0.9",
     "babel-loader": "^8.2.2",
