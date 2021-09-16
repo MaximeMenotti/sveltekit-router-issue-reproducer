@@ -16,7 +16,7 @@ services:
       - NEXT_CONTENT_RENDERER_BASE_URL=http://next-renderer:3000
   svelte-consumer:
     build:
-      context: ./svelte-content-consumer
+      context: svelte-consumer
     ports:
       - "3002:3002"
     depends_on:
