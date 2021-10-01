@@ -5,11 +5,10 @@ To understand the purpose of this POC please read our [wiki](https://wiki.decath
 ## 🏛 Architecture 
 This POC is composed by 2 folder one for content renderer and one consumer
 
-### ⚙️ next-js-content-renderer 
-An example of what our new content renderer could be. It can render static HTML content through API by url `/api/render`.
-Bundle js for js interaction can be generated with webpack by running `yarn widget:build`
+### ⚙️ svelte-content-renderer 
+An example of what our new content renderer could be. It can render static HTML content through API by url `/fragement`. You can access to all given component by using `/fragment?component=Header`
 
-JS and CSS needed for integration are delivered by `public` folder asset of next js project.
+Kudos to @thollander for the inspiration and [demo](https://github.com/dktunited/break-legacy-with-svelte) of this concept
 
 ### ⚙️ next-js-consumer
 An example of consumer build with [Next js](https://nextjs.org/)
@@ -32,10 +31,10 @@ docker-compose up
 ### ✋ Without docker
 1. Run content-renderer
 ```shell
-cd next-js-content-renderer
+cd svelte-content-renderer
 yarn install
 yarn build
-yarn start
+node ./server.js
 ```
 
 2. Run next-js consumer
@@ -61,4 +60,9 @@ All consumer are accessible locally on their affected ports:
 | -------- | --------------------- |
 | Next js  | http://localhost:3001 |
 | Svelte   | http://localhost:3002 |
+
+# Next step
+- [ ] Study access restriction and authentication.
+- [ ] Add varnish cache
+- [ ] Connect sphere api
 

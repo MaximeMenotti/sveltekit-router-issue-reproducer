@@ -4,16 +4,19 @@
     let content = ""
 
     onMount(async () => {
-      const res = await fetch(`http://localhost:3000/api/render`)
+      const res = await fetch(`http://localhost:3000/fragment?component=Header`)
 
       content = await res.text()
+      console.log(res.body)
+      const body = content
     });
 </script>
 
-<svelte:head>
-    <link rel="stylesheet" href="http://localhost:3000/sphere-content.css" />
-    <script src="http://localhost:3000/sphere-content.js" defer />
-</svelte:head>
+<style>
+    h1 {
+        color: #1a2a34;
+    }
+</style>
 
 <h1>Hello</h1>
 <div id="sphere-content"> {@html content} </div>
