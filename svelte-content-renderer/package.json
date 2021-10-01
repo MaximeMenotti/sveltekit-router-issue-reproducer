@@ -25,6 +25,7 @@
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
     "purgecss": "^4.0.3",
+    "purgecss-from-svelte": "^2.0.2",
     "svelte": "^3.42.6",
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.9.4",

@@ -1,11 +1,14 @@
 <script>
-    import Header from "$lib/Header.svelte";
+    import Brick from "$lib/Brick.svelte";
+
+    export let data = {
+      brick_list: []
+    }
+
+    let displayAll = false;
 </script>
-<div class="vtmn-container vtmn-mx-auto vtmn-my-2 vtmn-justify-center vtmn-flex vtmn-bg-brand-digital-light-3 vtmn-rounded-lg vtmn-p-6">
-    <p class="vtmn-text-xl vtmn-text-center vtmn-font-semibold vtmn-text-black">
-        Hello
-        <span class="vtmn-text-brand-digital vtmn-text-2xl">World!</span>
-        <span role="img" aria-label="Tada!"> 🎉 </span>
-    </p>
-</div>
-<Header />
+
+{#each data.brick_list as brick}
+    <Brick brick={brick} displayAll={displayAll} />
+{/each}
+<button class="vtmn-btn" on:click={() => displayAll = !displayAll}>{displayAll ? 'Hide all empty brick' : 'Display all bricks'}</button>

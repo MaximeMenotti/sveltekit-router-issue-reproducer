@@ -1,5 +1,6 @@
 const autoprefixer = require("autoprefixer");
 const purgecss = require("@fullhuman/postcss-purgecss");
+const PurgeSvelte = require("purgecss-from-svelte");
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -13,8 +14,9 @@ module.exports = {
       keyframes: true,
       content: ["./src/**/*.svelte", "./src/**/*.html"],
       whitelistPatterns: [/svelte-/, /tailwindcss\/\/base/,],
-      defaultExtractor: (content) =>
-        content.match(/[A-Za-z0-9-_:/]+/g) || [],
+      defaultExtractor: (content) => {
+        return PurgeSvelte.extract(content) || []
+      }
     }),
   ],
 };
