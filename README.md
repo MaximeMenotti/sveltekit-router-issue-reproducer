@@ -64,5 +64,5 @@ All consumer are accessible locally on their affected ports:
 # Next step
 - [ ] Study access restriction and authentication.
 - [ ] Add varnish cache
-- [ ] Connect sphere api
+- [X] Connect sphere api
 
