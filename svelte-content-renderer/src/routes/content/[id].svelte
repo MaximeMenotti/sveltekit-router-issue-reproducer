@@ -15,14 +15,6 @@
   import '@vtmn/css/dist/index.css';
   import Content from "$lib/Content.svelte";
   export let data;
-
-  export let title = data?.title
-  export let metaDescription = data?.meta_description
 </script>
-
-<svelte:head>
-    <title>{title}</title>
-    <meta name="description" content={metaDescription}>
-</svelte:head>
 
 <Content data={data} />

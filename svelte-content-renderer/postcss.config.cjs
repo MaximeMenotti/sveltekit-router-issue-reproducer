@@ -14,6 +14,7 @@ module.exports = {
       keyframes: true,
       content: ["./src/**/*.svelte", "./src/**/*.html"],
       whitelistPatterns: [/svelte-/, /tailwindcss\/\/base/,],
+      variables: true,
       defaultExtractor: (content) => {
         return PurgeSvelte.extract(content) || []
       }
