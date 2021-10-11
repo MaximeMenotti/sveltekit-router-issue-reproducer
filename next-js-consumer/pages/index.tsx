@@ -42,9 +42,6 @@ function Home(props: HomeType) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const headers = new Headers();
-  headers.append("Access-Control-Allow-Origin", "*");
-  headers.append('Access-Control-Allow-Headers', "*");
   const res = await fetch(`${process.env.NEXT_CONTENT_RENDERER_BASE_URL}/content/e648d2f6-fe1e-4052-8a51-4f7da09874e6`)
   const data = await res.text()
 
