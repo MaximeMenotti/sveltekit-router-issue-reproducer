@@ -1,14 +1,14 @@
 <script>
-    import Brick from "$lib/Brick.svelte";
+    import Brick from "$lib/Brick/Brick.svelte";
 
     export let data = {
-      brick_list: []
+      brickList: []
     }
 
     let displayAll = false;
 </script>
 
-{#each data.brick_list as brick}
+{#each data.brickList as brick}
     <Brick brick={brick} displayAll={displayAll} />
 {/each}
 <div class="vtmn-fixed vtmn-right-0 vtmn-bottom-0 vtmn-m-6">

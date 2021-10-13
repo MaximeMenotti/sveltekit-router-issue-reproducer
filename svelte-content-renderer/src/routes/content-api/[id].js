@@ -1,3 +1,5 @@
+import camelcaseKeys from "camelcase-keys";
+
 const API_ENDPOINT=import.meta.env.VITE_API_ENDPOINT
 const API_KEY=import.meta.env.VITE_API_KEY
 const CONTENT_TYPE=import.meta.env.VITE_CONTENT_TYPE
@@ -16,9 +18,11 @@ export async function get({ params }) {
 
     const json = await article.json();
 
+    const camelJson = camelcaseKeys(json, {deep: true})
+
     if (article) {
         return {
-            body: {...json}
+            body: {...camelJson}
         };
     }
 }
