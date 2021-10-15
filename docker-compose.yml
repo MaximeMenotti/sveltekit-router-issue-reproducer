@@ -1,10 +1,17 @@
-version: "3"
+version: "3.9"
 services:
   svelte-renderer:
     build:
       context: ./svelte-content-renderer
+      target: svelte-content-renderer
     ports:
       - "3000:3000"
+  storybook:
+    build:
+      context: ./svelte-content-renderer
+      target: storybook
+    ports:
+      - "6006:6006"
   next-consumer:
     build:
       context: ./next-js-consumer
