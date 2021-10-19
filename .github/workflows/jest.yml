@@ -2,7 +2,7 @@ name: CI
 on: push
 defaults:
   run:
-    working-directory: svelte-consumer
+    working-directory: ./svelte-content-renderer
 jobs:
   build:
     runs-on: ubuntu-latest
