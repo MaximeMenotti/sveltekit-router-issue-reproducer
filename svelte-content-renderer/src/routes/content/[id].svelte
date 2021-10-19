@@ -14,7 +14,7 @@
 
 <script>
   import '@vtmn/css/dist/index.css';
-  import Content from "$lib/Content.svelte";
+  import Content from "$lib/components/Content.svelte";
 
   export let color;
   export let data;

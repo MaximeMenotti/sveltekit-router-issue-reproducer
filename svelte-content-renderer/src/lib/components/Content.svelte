@@ -1,5 +1,5 @@
 <script>
-    import Brick from "$lib/Brick/Brick.svelte";
+    import Brick from "$lib/components/Brick/Brick.svelte";
 
     export let data = {
       brickList: []
