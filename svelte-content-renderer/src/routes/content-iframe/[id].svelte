@@ -1,7 +1,7 @@
 <script context="module">
   export const load = async ({ fetch, page }) => {
     const { id } = page.params;
-    const color = page.query.get('color') || '007DBC'
+    const color = page.query.get('color') || '#007DBC'
 
     const res = await fetch(`../content-api/${id}`)
     const data = await res.json()
