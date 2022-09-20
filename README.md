@@ -6,7 +6,7 @@ Find the issue here: https://github.com/sveltejs/kit/issues/6914
 - On the `main` branch you'll find an exemple of what is expected, using the `export const router = false;`. 
 - On the `reproducer` branch you'll find an example with upgraded version of sveltekit without `export const router = false;` (replaced in [this PR](https://github.com/sveltejs/kit/pull/6446)) and trying to use `data-sveltekit-reload` as workaround.
 
-For convience, [here](https://github.com/MaximeMenotti/sveltekit-router-issue-reproducer/pull/1/files) is the comparaison between those two branches.
+For convience, [here](https://github.com/MaximeMenotti/sveltekit-router-issue-reproducer/pull/2/files) is the comparaison between those two branches.
 
 ## 🚀 Usage
 
